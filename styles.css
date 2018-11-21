@@ -57,6 +57,9 @@ body {
 #footer p {
   color: white;
 }
+.column p {
+  line-height: 2;
+}
 a {
   color: #1abc9c;
   text-decoration: none;
