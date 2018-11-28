@@ -1,80 +1,73 @@
 <!DOCTYPE html>
 <html lang="de-DE">
-  <head>
+
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130032663-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-130032663-1');
+    </script>
+
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Mein Blog</title>
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="header">
-      <div class="container">
-        <a href="index.html" id="header-title">Mein Blog</a>
-        <ul id="header-nav">
-          <li><a href="about.html">&Uuml;ber</a></li>
-          <li><a onclick="return openInfoWin()">Kontakt</a></li>
-        </ul>
-      </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="dependencies/styles.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+
+    <style>
+        #welcomeContainer:hover {
+            background-color: #777784;
+        }
+        #welcomeContainer:active {
+            background-color: #666674;
+        }
+        #LinkVisit:active {
+            background-color: #000005d3;
+        }
+    </style>
+
+    <title>Willkommen</title>
+</head>
+
+<body">
+    <video src="assets/marketing_coding.mp4" autoplay="true" loop="true" width="100%" style="z-index:-2; position: fixed">
+    </video>
+    <div class="badge badge-secondary" style="z-index:1; position:fixed; margin-top: 25%; margin-left: 25%;box-shadow: 0px 0px 50px rgba(50, 50, 70, 0.3)"
+        id="welcomeContainer">
+        <h3 class="text-dark p-4">Willkommen.</h3>
+        <a href="blog.html" class="btn btn-dark m-3" id="LinkVisit">Blog besuchen</a>
     </div>
-    <div id="content">
-      <div class="post-container">
-        <div class="post">
-          <div class="post-author">
-            <img src="me.png" /> <span>mithem</span>
-          </div>
-          <p class="post-date">21. November 2018</p>
-          <h3 class="post-title">Über diesen Blog...</h3>
-          <div class="post-content">
-            <p>
-              Dieser Blog ist ausschließlich dazu da, Erfahrungen im Umgang mit
-              Web-Development und GitHub zu sammeln, daher ist es ungewiss, wann
-              und ob ich noch einmal etwas bemerkenswertes hierzu beitragen
-              werde.
-            </p>
-            <p>
-              Mir ist bewusst, dass der Abschnitt "Meine Verlinkungen" im footer
-              leer ist, das ist kein Fehler, doch möchte ich dort nichts
-              verlinken. Womöglich sind dort allerdings Links zu Themen und
-              Unternehmen zu finden, die mich interessieren, mit denen ich
-              allerdings keinerlei betreffende Vertäge oder Vereinbarungen habe.
-            </p>
-            <p><br /><br />Auf Wiedersehen!</p>
-          </div>
-        </div>
-      </div>
-      <div class="post-container">
-        <div class="post">
-          <div class="post-author">
-            <img src="me.png" /> <span>mithem</span>
-          </div>
-          <p class="post-date">21. November 2018</p>
-          <h3 class="post-title">Ein Test</h3>
-          <div class="post-content">
-            <p>Hallo, dieser Post wurde für einen Test geschrieben</p>
-          </div>
-        </div>
-      </div>
+    <div class="col-10" style="z-index: 0; margin-top: 0px; width:100%;">
+        <img class="m-3" style="z-index:1;width:24px;position:fixed" src="assets/info.png" alt="Info" onclick="return showCreditsBox(), waitForCloseCreditsBox()" />
     </div>
-    <div id="footer">
-      <div class="container">
-        <div class="column">
-          <h4>Verlinkungen</h4>
-          <p>
-            <a href="apple.com/de/">Apple</a><br />
-            <a href="bmw.de">BMW</a><br />
-            <a href="Porsche">Porsche</a><br />
-            <a href="https://www.european-flight-academy.com/"
-              >European Flight Academy</a
-            ><br />
-            <a href="w3schools.com">W3Schools</a><br />
-            <a href="visualstudio.com">Visual Studio</a><br />
-          </p>
-        </div>
-        <div class="column">
-          <h4>&Uuml;ber mich</h4>
-          <p>Interessiert in Flugzeuge und programmieren.</p>
-        </div>
-      </div>
+    <div class="alert-info p-3 rounded ml-1" id="creditsBox" style="display:none; position: fixed;cursor: pointer"
+        onclick="return closeCreditsBox()">
+        <span>The video used is stored at
+            https://www.codecademy.com/assets/marketing-pages/intensives/bws/coding-scenes-9a2031e8142b40bdb5d936d5eef33dfa.mp4;
+            owner not known by me</span>
     </div>
-  </body>
+    <script>
+        function showCreditsBox() {
+            document.getElementById("creditsBox").style.display = "block";
+        }
+
+        function closeCreditsBox() {
+            document.getElementById("creditsBox").style.display = "none";
+            clearTimeout();
+        }
+
+        function waitForCloseCreditsBox() {
+            var timer = setTimeout(closeCreditsBox, 15000);
+        }
+    </script>
+    </body>
+
 </html>

@@ -1,58 +1,78 @@
 <!DOCTYPE html>
 <html lang="de-DE">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Mein Blog</title>
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="header">
-      <div class="container">
-        <a href="index.html" id="header-title">Mein Blog</a>
-        <ul id="header-nav">
-          <li><a href="about.html">&Uuml;ber</a></li>
-          <li><a onclick="return openInfoWin()">Kontakt</a></li>
-        </ul>
-      </div>
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130032663-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-130032663-1');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="dependencies/styles.css" />
+
+  <title>Mein Blog</title>
+
+  <script src="dependencies/script.js"></script>
+
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <a href="blog.html" id="header-title">Mein Blog</a>
+      <ul id="header-nav">
+        <li><a href="" class="disabled-anchor">&Uuml;ber</a></li>
+        <li><a href="info.html">Kontakt</a></li>
+      </ul>
     </div>
-    <div id="content">
-      <div class="container">
-        <div class="post">
-          <div class="about-author">
-            <img src="me.png" width="20%" height="20%" alt="das bin ich" />
-          </div>
-          <h1 class="about-title">&Uuml;ber mich</h1>
-          <div class="about-content">
-            <p>
-              Ich bin in Deutschland ans&auml;ssig und nenne mich mithem oder so
-              &auml;hnlich. Mehr gibt es nicht zu sagen, außer dass ich
-              Flugzeuge sowie Programmieren spannend finde
-            </p>
-          </div>
+  </div>
+  <div id="content">
+    <div class="container">
+      <div class="post">
+        <div class="about-author">
+          <img src="assets/me.png" width="20%" height="20%" alt="das bin ich" />
         </div>
-      </div>
-    </div>
-    <div id="footer">
-      <div class="container">
-        <div class="column">
-          <h4>Verlinkungen</h4>
+        <h1 class="about-title">&Uuml;ber mich</h1>
+        <div class="about-content">
           <p>
-            <a href="https://www.apple.com/de/" target="_blank">Apple</a><br />
-            <a href="https://www.bmw.de" target="_blank">BMW</a><br />
-            <a href="http://www.Porsche.de" target="_blank">Porsche</a><br />
-            <a href="https://www.european-flight-academy.com/" target="_blank"
-              >European Flight Academy</a
-            ><br />
-            <a href="https://www.w3schools.com" target="_blank">W3Schools</a><br />
-            <a href="https://www.visualstudio.com" target="_blank">Visual Studio</a><br />
+            Ich bin in Deutschland ans&auml;ssig und nenne mich mithem oder so
+            &auml;hnlich. Mehr gibt es nicht zu sagen, außer dass ich
+            Flugzeuge sowie Programmieren spannend finde
           </p>
         </div>
-        <div class="column">
-          <h4>&Uuml;ber mich</h4>
-          <p>Interessiert in Flugzeuge und programmieren.</p>
-        </div>
       </div>
     </div>
-  </body>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <div class="column">
+        <h4>Verlinkungen</h4>
+        <p>
+          <a href="https://www.apple.com/de/" target="_blank">Apple</a><br />
+          <a href="https://www.bmw.de" target="_blank">BMW</a><br />
+          <a href="http://www.Porsche.de" target="_blank">Porsche</a><br />
+          <a href="https://www.european-flight-academy.com/" target="_blank">European Flight Academy</a><br />
+          <a href="https://www.w3schools.com" target="_blank">W3Schools</a><br />
+          <a href="https://www.visualstudio.com" target="_blank">Visual Studio</a><br />
+        </p>
+      </div>
+      <div class="column">
+        <h4>&Uuml;ber mich</h4>
+        <p>Interessiert in Flugzeuge und programmieren.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
