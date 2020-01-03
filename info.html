@@ -1,75 +1,78 @@
 <!DOCTYPE html>
 <html lang="de-DE">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-130032663-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-<head>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130032663-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+      gtag("config", "UA-130032663-1");
+    </script>
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    gtag('config', 'UA-130032663-1');
-  </script>
+    <link rel="stylesheet" href="src/styles.css" />
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="src/script.js"></script>
 
-  <link rel="stylesheet" href="dependencies/styles.css" />
+    <title>Kontakt</title>
+  </head>
 
-  <script src="dependencies/script.js"></script>
-
-  <title>Kontakt</title>
-
-</head>
-
-<body onclick="return window.close()">
-  <div id="header">
-    <div class="container">
-      <a href="blog.html" id="header-title">Mein Blog</a>
-      <ul id="header-nav">
-        <li><a href="about.html">&Uuml;ber</a></li>
-        <li><a href="" class="disabled-anchor">Kontakt</a></li>
-      </ul>
+  <body onclick="return window.close()">
+    <div id="header">
+      <div class="container">
+        <a href="blog.html" id="header-title">Mein Blog</a>
+        <ul id="header-nav">
+          <li><a href="about.html">&Uuml;ber</a></li>
+          <li><a href="" class="disabled-anchor">Kontakt</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div id="content">
-    <div class="post-container">
-      <div class="post">
-        <div class="post-author">
-          <img src="assets/me.png" /> <span>mithem</span>
+    <div id="content">
+      <div class="post-container">
+        <div class="post">
+          <div class="post-author">
+            <img src="assets/me.png" /> <span>mithem</span>
+          </div>
+          <h3 class="post-title">Keine Kontaktmöglichkeiten</h3>
+          <div class="post-content">
+            <p>
+              Es gibt aktuell auf diesem Blog keine Kontaktmöglichkeiten zu mir.
+            </p>
+            <p>Durch Klicken auf dieser Seite wird selbige geschlosse.</p>
+          </div>
         </div>
-        <h3 class="post-title">Keine Kontaktmöglichkeiten</h3>
-        <div class="post-content">
-          <p>Es gibt aktuell auf diesem Blog keine Kontaktmöglichkeiten zu mir.</p>
-          <p>Durch Klicken auf dieser Seite wird selbige geschlosse.</p>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <div class="column">
+          <h4>Verlinkungen</h4>
+          <p>
+            <a href="apple.com/de/">Apple</a><br />
+            <a href="bmw.de">BMW</a><br />
+            <a href="Porsche">Porsche</a><br />
+            <a href="https://www.european-flight-academy.com/"
+              >European Flight Academy</a
+            ><br />
+            <a href="w3schools.com">W3Schools</a><br />
+            <a href="visualstudio.com">Visual Studio</a><br />
+          </p>
+        </div>
+        <div class="column">
+          <h4>&Uuml;ber mich</h4>
+          <p>Interessiert in Flugzeuge und programmieren.</p>
         </div>
       </div>
     </div>
-  </div>
-  <div id="footer">
-    <div class="container">
-      <div class="column">
-        <h4>Verlinkungen</h4>
-        <p>
-          <a href="apple.com/de/">Apple</a><br />
-          <a href="bmw.de">BMW</a><br />
-          <a href="Porsche">Porsche</a><br />
-          <a href="https://www.european-flight-academy.com/">European Flight Academy</a><br />
-          <a href="w3schools.com">W3Schools</a><br />
-          <a href="visualstudio.com">Visual Studio</a><br />
-        </p>
-      </div>
-      <div class="column">
-        <h4>&Uuml;ber mich</h4>
-        <p>Interessiert in Flugzeuge und programmieren.</p>
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>

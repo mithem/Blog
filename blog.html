@@ -1,98 +1,117 @@
 <!DOCTYPE html>
 <html lang="de-DE">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-130032663-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-<head>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130032663-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+      gtag("config", "UA-130032663-1");
+    </script>
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    gtag('config', 'UA-130032663-1');
-  </script>
+    <link rel="stylesheet" href="src/styles.css" />
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mein Blog</title>
 
-  <link rel="stylesheet" href="dependencies/styles.css" />
+    <script src="src/script.js"></script>
+  </head>
 
-  <title>Mein Blog</title>
-
-  <script src="dependencies/script.js"></script>
-
-</head>
-
-<body>
-  <div id="header">
-    <div class="container">
-      <a href="" id="header-title" class="disabled-anchor">Mein Blog</a>
-      <ul id="header-nav">
-        <li><a href="about.html">&Uuml;ber</a></li>
-        <li><a onclick="return openInfoPage()">Kontakt</a></li>
-      </ul>
+  <body>
+    <div id="header">
+      <div class="container">
+        <a href="" id="header-title" class="disabled-anchor">Mein Blog</a>
+        <ul id="header-nav">
+          <li><a href="about.html">&Uuml;ber</a></li>
+          <li><a onclick="return openInfoPage()">Kontakt</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div id="content">
-    <div class="post-container">
-      <div class="post">
-        <div class="post-author">
-          <img src="assets/me.png" /> <span>mithem</span>
+    <div id="content">
+      <div class="post-container">
+        <div class="post">
+          <div class="post-author">
+            <img src="assets/me.png" /> <span>mithem</span>
+          </div>
+          <p class="post-date">21. November 2018</p>
+          <h3 class="post-title">Über diesen Blog...</h3>
+          <div class="post-content">
+            <p>
+              Dieser Blog ist ausschließlich dazu da, Erfahrungen im Umgang mit
+              Web-Development und GitHub zu sammeln, daher ist es ungewiss, wann
+              und ob ich noch einmal etwas bemerkenswertes hierzu beitragen
+              werde.
+            </p>
+            <p>
+              Mir ist bewusst, dass der Abschnitt "Meine Verlinkungen" im footer
+              leer quasi leer ist, wenngleich dort Links zu Unternehmen zu
+              finden sind, die mich in irgendeiner Weise interessieren. An
+              dieser Stelle möchte ich betonen, dass ich keinerlei relevante
+              Geschäftsbeziehungen oder Verträge mit diesen Unternehmen habe.
+            </p>
+            <p><br /><br />Auf Wiedersehen!</p>
+          </div>
         </div>
-        <p class="post-date">21. November 2018</p>
-        <h3 class="post-title">Über diesen Blog...</h3>
-        <div class="post-content">
+      </div>
+      <div class="post-container">
+        <div class="post">
+          <div class="post-author">
+            <img src="assets/me.png" /> <span>mithem</span>
+          </div>
+          <p class="post-date">29. November 2018</p>
+          <h3 class="post-title">Neue Version</h3>
+          <div class="post-content">
+            <p>
+              Kürzlich habe ich neue Versionen der Blog-Website commited, sodass
+              es nun eine (neue) Willkommens-Page gibt. Ich hoffe, das Design
+              ist einigermaßen zumutbar, und die anderen Änderungen im Backend
+              und Ähnliches sind ebenso nützlich wie zuverlässig.<br />An dieser
+              Stelle möchte ich noch darauf hinweisen, dass diese Website
+              (zumindest die selbstgebaute Version) zum aktuellen Zeitpunkt
+              keinerlei Cookies nutzt, natürlich kann sich das zu einem
+              zukünftigen Zeitpunkt ändern, dafür werde ich womöglich einen
+              neuen Eintrag schreiben, vielleicht aber auch nicht; aus
+              rechtlichen Gründen hoffe ich, an einen Hinweis zu denken. Sollte
+              das Laden des Skripts funktionieren, ist ab diesem Zeitpunkt
+              außerdem Google Analytics inkludiert; Ob das Laden erfolgreich
+              war, lässt sich in der Browser-internen Konsole ermitteln.
+              Allerdings sollte beachtet werden, dass Google Analytics u.U.
+              Cookies nutzt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <div class="column">
+          <h4>Verlinkungen</h4>
           <p>
-            Dieser Blog ist ausschließlich dazu da, Erfahrungen im Umgang mit
-            Web-Development und GitHub zu sammeln, daher ist es ungewiss, wann
-            und ob ich noch einmal etwas bemerkenswertes hierzu beitragen
-            werde.
+            <a href="apple.com/de/">Apple</a><br />
+            <a href="bmw.de">BMW</a><br />
+            <a href="Porsche">Porsche</a><br />
+            <a href="https://www.european-flight-academy.com/"
+              >European Flight Academy</a
+            ><br />
+            <a href="w3schools.com">W3Schools</a><br />
+            <a href="visualstudio.com">Visual Studio</a><br />
           </p>
-          <p>
-            Mir ist bewusst, dass der Abschnitt "Meine Verlinkungen" im footer
-            leer quasi leer ist, wenngleich dort Links zu Unternehmen zu finden sind, die mich in irgendeiner Weise interessieren.
-            An dieser Stelle möchte ich betonen, dass ich keinerlei relevante Geschäftsbeziehungen oder Verträge mit diesen Unternehmen habe.
-          </p>
-          <p><br /><br />Auf Wiedersehen!</p>
+        </div>
+        <div class="column">
+          <h4>&Uuml;ber mich</h4>
+          <p>Interessiert in Flugzeuge und programmieren.</p>
         </div>
       </div>
     </div>
-    <div class="post-container">
-      <div class="post">
-        <div class="post-author">
-          <img src="assets/me.png" /> <span>mithem</span>
-        </div>
-        <p class="post-date">29. November 2018</p>
-        <h3 class="post-title">Neue Version</h3>
-        <div class="post-content">
-          <p>Kürzlich habe ich neue Versionen der Blog-Website commited, sodass es nun eine (neue) Willkommens-Page gibt. Ich hoffe, das Design ist einigermaßen zumutbar, und die anderen Änderungen im Backend und Ähnliches sind ebenso nützlich wie zuverlässig.<br />An dieser Stelle möchte ich noch darauf hinweisen, dass diese Website (zumindest die selbstgebaute Version) zum aktuellen Zeitpunkt keinerlei Cookies nutzt, natürlich kann sich das zu einem zukünftigen Zeitpunkt ändern, dafür werde ich womöglich einen neuen Eintrag schreiben, vielleicht aber auch nicht; aus rechtlichen Gründen hoffe ich, an einen Hinweis zu denken. Sollte das Laden des Skripts funktionieren, ist ab diesem Zeitpunkt außerdem Google Analytics inkludiert; Ob das Laden erfolgreich war, lässt sich in der Browser-internen Konsole ermitteln. Allerdings sollte beachtet werden, dass Google Analytics u.U. Cookies nutzt.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="footer">
-    <div class="container">
-      <div class="column">
-        <h4>Verlinkungen</h4>
-        <p>
-          <a href="apple.com/de/">Apple</a><br />
-          <a href="bmw.de">BMW</a><br />
-          <a href="Porsche">Porsche</a><br />
-          <a href="https://www.european-flight-academy.com/">European Flight Academy</a><br />
-          <a href="w3schools.com">W3Schools</a><br />
-          <a href="visualstudio.com">Visual Studio</a><br />
-        </p>
-      </div>
-      <div class="column">
-        <h4>&Uuml;ber mich</h4>
-        <p>Interessiert in Flugzeuge und programmieren.</p>
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
