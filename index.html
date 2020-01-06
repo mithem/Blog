@@ -1,75 +1,101 @@
 <!DOCTYPE html>
 <html lang="de-DE">
-
-<head>
-
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130032663-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-130032663-1"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'UA-130032663-1');
+      gtag("config", "UA-130032663-1");
     </script>
 
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="src/styles.css" />
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
 
     <style>
-        #welcomeContainer:hover {
-            background-color: #777784;
-        }
-        #welcomeContainer:active {
-            background-color: #666674;
-        }
-        #LinkVisit:active {
-            background-color: #000005d3;
-        }
+      #welcomeContainer:hover {
+        background-color: #777784;
+      }
+      #welcomeContainer:active {
+        background-color: #666674;
+      }
+      #LinkVisit:active {
+        background-color: #000005d3;
+      }
     </style>
 
     <title>Willkommen</title>
-</head>
+  </head>
 
-<body">
-    <video autoplay="true" loop="true" width="100%" style="z-index:-2; position: fixed">
-    <source src="assets/marketing_coding.mp4" />
-    <source src="assets/marketing_coding.m4v" />
+  <body>
+    <video
+      autoplay="true"
+      loop="true"
+      width="100%"
+      style="z-index:-2; position: fixed"
+    >
+      <source src="assets/marketing_coding.mp4" />
+      <source src="assets/marketing_coding.m4v" />
     </video>
-    <div class="badge badge-secondary" style="z-index:1; position:fixed; margin-top: 25%; margin-left: 25%;box-shadow: 0px 0px 50px rgba(50, 50, 70, 0.3)"
-        id="welcomeContainer">
-        <h3 class="text-dark p-4">Willkommen.</h3>
-        <a href="blog.html" class="btn btn-dark m-3" id="LinkVisit">Blog besuchen</a>
+    <div
+      class="badge badge-secondary"
+      style="z-index:1; position:fixed; margin-top: 25%; margin-left: 25%;box-shadow: 0px 0px 50px rgba(50, 50, 70, 0.3)"
+      id="welcomeContainer"
+    >
+      <h3 class="text-dark p-4">Willkommen.</h3>
+      <a href="blog.html" class="btn btn-dark m-3" id="LinkVisit"
+        >Blog besuchen</a
+      >
     </div>
     <div class="col-10" style="z-index: 0; margin-top: 0px; width:100%;">
-        <img class="m-3" style="z-index:1;width:24px;position:fixed" src="assets/info.png" alt="Info" onclick="return showCreditsBox(), waitForCloseCreditsBox()" />
+      <img
+        class="m-3"
+        style="z-index:1;width:24px;position:fixed"
+        src="assets/info.png"
+        alt="Info"
+        onclick="return showCreditsBox(), waitForCloseCreditsBox(), playVid()"
+      />
     </div>
-    <div class="alert-info p-3 rounded ml-1" id="creditsBox" style="display:none; position: fixed;cursor: pointer"
-        onclick="return closeCreditsBox()">
-        <span>The video used is stored at
-            https://www.codecademy.com/assets/marketing-pages/intensives/bws/coding-scenes-9a2031e8142b40bdb5d936d5eef33dfa.mp4;
-            owner not known by me</span>
+    <div
+      class="alert-info p-3 rounded ml-1"
+      id="creditsBox"
+      style="display:none; position: fixed;cursor: pointer"
+      onclick="return closeCreditsBox()"
+    >
+      <span
+        >The video used is stored at
+        https://www.codecademy.com/assets/marketing-pages/intensives/bws/coding-scenes-9a2031e8142b40bdb5d936d5eef33dfa.mp4;
+        owner not known by me</span
+      >
     </div>
     <script>
-        function showCreditsBox() {
-            document.getElementById("creditsBox").style.display = "block";
-        }
+      function showCreditsBox() {
+        document.getElementById("creditsBox").style.display = "block";
+      }
 
-        function closeCreditsBox() {
-            document.getElementById("creditsBox").style.display = "none";
-            clearTimeout();
-        }
+      function closeCreditsBox() {
+        document.getElementById("creditsBox").style.display = "none";
+        clearTimeout();
+      }
 
-        function waitForCloseCreditsBox() {
-            var timer = setTimeout(closeCreditsBox, 15000);
-        }
+      function waitForCloseCreditsBox() {
+        var timer = setTimeout(closeCreditsBox, 15000);
+      }
+
+      function playVid() {
+        document.querySelector("video").play();
+      }
     </script>
-    </body>
-
+  </body>
 </html>
